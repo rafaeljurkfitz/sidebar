@@ -1,0 +1,205 @@
+:root {
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+    --light-grey: #dce4e3;
+    --text-color: #084236;
+    --padding-size: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Outer box styles */
+body {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    margin-left: 5em;
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    padding: .2em var(--padding-size);
+    transition: margin-left 500ms;
+}
+
+aside {
+    max-width: 15em;
+    width: 5.4em;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    background-color: var(--green);
+    color: var(--text-color);
+    overflow-x: hidden;
+    transition: width 500ms;
+}
+
+/* Inner aside styles */
+aside .navbar {
+    max-width: 100%;
+    padding: var(--padding-size);
+}
+
+.menu-list a {
+    color: var(--light-grey);
+    text-decoration: none;
+}
+
+.menu-item {
+    list-style: none;
+}
+
+aside .menu-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2em 0em;
+    line-height: 0;
+    border-radius: .5em;
+}
+
+aside .menu-header #hamburguer {
+    cursor: pointer;
+    border: none;
+    line-height: normal;
+    background-color: transparent;
+}
+
+.menu-header .logo {
+    display: none;
+}
+aside .navbar .menu-list {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--padding-size);
+}
+
+aside .navbar .menu-list .menu-item {
+    width: 100%;
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    gap: 1.8em;
+    padding: .8em var(--padding-size);
+    transition: 350ms linear gap;
+    cursor: pointer;
+}
+
+aside .navbar .menu-list .menu-item:hover,
+aside .navbar .menu-list .menu-item:focus {
+    background-color: var(--light-green);
+}
+
+aside .navbar .menu-list .search{
+    width: 100%;
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    gap: var(--padding-size);
+    padding: .8em var(--padding-size);
+    cursor: pointer;
+    background-color: var(--text-color);
+}
+
+aside .navbar .menu-list .search #search {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    background-color: transparent;
+    color: var(--green);
+}
+
+aside .navbar .menu-list .search #search::placeholder {
+    opacity: 1;
+}
+
+aside .profile {
+    height: 3.5em;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    padding: .3em .5em;
+    background-color: var(--light-green);
+    color: var(--text-color);
+}
+
+aside .profile .profile-pic {
+    height: 48px;
+    width: 48px;
+    background-image: url('./images/photo.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: .5em;
+}
+
+aside .profile .user-info,
+aside .profile .profile-pic {
+    display: none;
+}
+
+aside .profile p:nth-of-type(1) {
+    font-size: 1em;
+    line-height: 1;
+}
+
+aside .profile p:nth-of-type(2) {
+    font-size: .9em;
+    line-height: 1;
+}
+
+aside .profile .logout {
+    line-height: 0;
+}
+
+/* Inner aside styles */
+
+
+/* control visibility */
+
+.open {
+    width: 15em;
+}
+
+aside.open .profile-pic,
+aside.open .user-info {
+    display: unset;
+}
+
+aside.open .logout {
+    margin-left: auto;
+}
+
+aside.open ~ main {
+    margin-left: 15em;
+    transition: margin-left 500ms;
+}
+
+aside.open .menu-list .menu-item {
+    gap: var(--padding-size);
+}
+
+aside.open .menu-header {
+    justify-content: space-between;
+}
+
+aside.open .menu-header .logo {
+    display: unset;
+}
