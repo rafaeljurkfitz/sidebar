@@ -1,7 +1,7 @@
 # Sidebar
 
 <p align="center">
-  <img alt="sidebar-print" src="images/print-sidebar.PNG" width="100%">
+  <img alt="sidebar-print" src="images/print-sidebar.png" width="100%">
 </p>
 
 ##
