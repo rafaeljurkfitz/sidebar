@@ -6,7 +6,7 @@
 
 ##
 
-### 🚀 Tecnologias
+### 🛠 Tecnologias
 Foram usadas as tecnologias:
 
   - *HTML*
@@ -20,7 +20,13 @@ Neste desafio foi criado uma sidebar responsiva. Quando o usuário clicar no íc
 
 Figma: https://bit.ly/3sdH1XB
 
+#### Features:
+<!-- ❌✅ -->
+
+1. ✅ Criar uma sidebar que que altere o estado entre aberto e fechado conforme o clique do usuário.
+2. ✅ Adicionado um campo de pesquisa em texto.
+
 ##
 
-### Deploy
+### 🚀 Deploy
 https://rafaeljurkfitz.github.io/sidebar/
